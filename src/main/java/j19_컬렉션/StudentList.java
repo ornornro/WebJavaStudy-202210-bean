@@ -115,7 +115,27 @@ public class StudentList {
             nameList
          */
 
+        List<Integer> idList = new ArrayList<Integer>(); // 일반자료형은 제네릭에서 사용불가
+        List<String> nameList = new ArrayList<String>();
 
+        for(Student student : students) {
+            idList.add(student.getId());
+            nameList.add(student.getName());
+        }
+
+        System.out.println(idList);
+        System.out.println(nameList);
+
+        students.clear();
+
+        System.out.println(students);
+
+        for(int i = 0; i < idList.size(); i++) {
+            Student student = new Student(idList.get(i), nameList.get(i));
+            students.add(student);
+        }
+
+        System.out.println(students);
 
     }
 }
