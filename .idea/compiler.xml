@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="WebJavaStudy-202210-bean" />
         <module name="JavaStudy202210-junil" />
         <module name="JavaStudy-202210-junil" />
         <module name="WebJavaStudy-202210-junil" />
