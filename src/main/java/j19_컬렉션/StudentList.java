@@ -109,5 +109,13 @@ public class StudentList {
         Collections.reverse(reverseStudents);
 
         System.out.println(reverseStudents);
+
+        /*
+            idList
+            nameList
+         */
+
+
+
     }
 }
