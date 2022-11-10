@@ -1,6 +1,8 @@
 package j19_컬렉션;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class StudentSet {
@@ -22,8 +24,54 @@ public class StudentSet {
             3. 20220001 학번이 존재하면 해당 학생을 삭제하세요.
 
             set -> list 변환
-            해당 list를 학번 순서에 맞게 정렬하시오.
+            해당 list 를 학번 순서에 맞게 정렬하시오.
          */
+
+        String searchName = "김혜진";
+
+        for(Student student : students) {
+            if(student.getName().equals(searchName)) {
+                System.out.println(searchName + "학생의 학번: " + student.getId());
+                break;
+            }
+        }
+
+        int searchId = 20220004;
+
+        for(Student student : students) {
+            if(student.getId() == searchId) {
+                student.setName("설민수");
+                break;
+            }
+        }
+
+        searchId = 20220001;
+
+        for(Student student : students) {
+            if(student.getId() == searchId) {
+                students.remove(student);
+                break;
+            }
+        }
+
+        System.out.println(students);
+
+        int cmpId = 20220000;
+        int j = 0;
+
+        List<Student> sortStudents = new ArrayList<Student>();
+        for(int i = 0; i < students.size(); i++) {
+            for(Student student : students) {
+                if(student.getId() == cmpId) {
+                    sortStudents.add(student);
+                }
+            }
+            cmpId++;
+        }
+
+        System.out.println(sortStudents);
+        System.out.println("<<<<<<<<<< 정렬 >>>>>>>>>>");
+
     }
 
 }
